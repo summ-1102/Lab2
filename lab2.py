@@ -1,3 +1,4 @@
+import statistics
 print("ET0735 (DevOps for AIoT) - Lab 2 - Introduction to Python")
 
 def display_main_menu():
@@ -20,9 +21,19 @@ def find_min_max(numbers):
     max = numbers[len(numbers)-1]
     print("Min num is " + str(min))
     print("Max num is " + str(max))
+
+def find_median(numbers):
+    median = statistics.median(numbers)
+    print("Median is " + str(median))
  
+def find_mode(numbers):
+    mode = statistics.mode(numbers)
+    print("Mode is " + str(mode))
+
 display_main_menu()
 number = get_user_input()
 calc_average(number)
 find_min_max(number)
+find_median(number)
+find_mode(number)
 
